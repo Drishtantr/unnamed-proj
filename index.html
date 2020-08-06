@@ -5,6 +5,9 @@
     <title>Transcribe</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"  integrity="sha384" crossorigin="anonymous">
 
 
     
@@ -40,8 +43,13 @@
         </nav>
     </diV>
 
+    <div id="mycontainer">
+        <div class="c-video">
+            <video class='video' id='match' controls></video>
+        </div>
+    </div>
+    
     <div class="container">
-
         <!--This section for choose files button-->
         <div class="audiovideo">
 
@@ -58,11 +66,14 @@
 
 
                 <!--buttons to choose video and audio file-->
+                
                 <div class="p-2">
-                    <button type="button" class="btn btn-primary" style="width: 230px;">
-                        <input type="file" accept="audio/*, video/*" name="" id="file" hidden>
+                    
+                    <button type="button" class="btn btn-primary"  style="width: 230px;">
+                        <input type="file" accept="audio/*, video/*" name="" onchange="videoclick(this)" id="file" hidden>
                         <label for="file" id="selector"><i id="fontupload" class="fas fa-upload"></i><br> Choose audio(or video) file</label>
                     </button>
+                    
                 </div>
                 <!--YouTube video upload button-->
                 <div class="p-2" style="margin-top: -15px;">
@@ -112,30 +123,11 @@
         </div>
         
     </div>
-
-
-
     
     <!--
     <input type="file" accept="audio/*, video/*" name="" id="file" hidden>
     <label for="file" id="selector"><span id="uploadfont"><i class="fas fa-upload"></i></span><br> Choose audio(or video) file</label>
   -->
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   <script src="app.js"></script> <!--script for app.js-->
 

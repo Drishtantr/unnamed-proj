@@ -12,3 +12,15 @@ function closeWindow(){
     y = x.style.display = 'none';
     return y;
 }
+
+function videoclick(obj){
+    document.getElementById('mycontainer').style.display='inline';
+    var myvideo = document.getElementById('match');
+    var reader = new FileReader();
+    reader.onload = (function(video) {return function(e) {video.src = e.target.result;};})(myvideo);
+    reader.addEventListener('load', function() {
+      myvideo.play()
+    });
+    reader.readAsDataURL(obj.files[0]);
+  
+}
